@@ -1,0 +1,207 @@
+---
+// Layout component for the header
+---
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
+</head>
+
+<!-- Top bar -->
+<div class="header-top">
+  <div class="header-top-left">
+    <img src="/social-icons.png" alt="Social icons" class="social-icons-img" />
+  </div>
+  <div class="header-top-center">
+    <span>4,8 / 5 stjerner på TrustPilot</span>
+    <span>Medlem af Rejsegarantifonden</span>
+    <span>Rejser for unge siden 2010</span>
+  </div>
+  <div class="header-top-right">
+    Brug for hjælp?
+  </div>
+</div>
+
+<!-- Main header -->
+<div class="header-main">
+  <div class="header-logo">HØJSKOLENDK</div>
+  <nav class="header-nav">
+    <a href="#">Rejsekalender</a>
+    <a href="#">Højskoleophold</a>
+    <a href="#">Sommerhøjskole</a>
+    <a href="#">Priser</a>
+    <a href="#">Om os</a>
+    <a href="#">Kontakt os</a>
+  </nav>
+  <button class="header-btn">Bestil ophold</button>
+</div>
+
+<slot />
+
+<!-- Footer -->
+<footer class="footer-section">
+  <div class="footer-left">
+    <img src="/rings_transparent.png" alt="White rings" class="footer-rings" />
+    <h2 class="footer-title">Få svar på dine spørgsmål</h2>
+    <p class="footer-subtitle">Vores rejseledere sidder klar til at hjælpe dig.</p>
+    <p class="footer-desc">Med flere hundrede skønne elever om året, har vi hørt de fleste spørgsmål vedrørende vores højskoleophold i udlandet mange gange. Vi har gjort vores bedste for at svare på de fleste “ofte stillede spørgsmål” herunder.</p>
+    <p class="footer-desc">Vi håber du finder svar på dine spørgsmål og hvis ikke, er du altid velkommen til at ringe til os på kontoret på tlf. <b>7027 9007</b> eller skrive til os på <b>info@hojskolendk.dk</b></p>
+    <div class="footer-buttons">
+      <a href="tel:70279007" class="footer-btn">7027 9007</a>
+      <a href="mailto:info@hojskolendk.dk" class="footer-btn">info@hojskolendk.dk</a>
+    </div>
+    <div class="footer-hours">Mandag - Fredag kl. 10.00 – 17.00.</div>
+  </div>
+  <div class="footer-right">
+    <h3 class="footer-questions-title">Ofte stillede spørgsmål</h3>
+    <ul class="footer-questions-list">
+      <li>Hvor mange elever er der på et hold?</li>
+      <li>Hvad er gennemsnitsalderen på vores ophold?</li>
+      <li>Rejser de fleste alene?</li>
+      <li>Er der lige mange drenge og piger med på holdene?</li>
+      <li>Er undervisningen på dansk?</li>
+      <li>Er der internet de steder vi bor?</li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+.header-top {
+  background: #edc3a5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1rem;
+}
+.social-icons-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.header-top-center {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  color: #a94e00;
+  font-weight: 500;
+}
+.header-top-center span {
+  margin: 0;
+}
+.header-top-right {
+  color: #a94e00;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem 2rem;
+  background: #fff;
+}
+.header-logo {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  transform: rotate(-6deg);
+}
+.header-nav {
+  display: flex;
+  gap: 2.5rem;
+}
+.header-nav a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.header-btn {
+  background: #d25a00;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.header-btn:hover {
+  background: #a94e00;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #d25a00;
+  color: #fff;
+  padding: 3rem 2rem 2rem 2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.footer-left {
+  width: 48%;
+}
+.footer-rings {
+  width: 220px;
+  margin-bottom: 2rem;
+  display: block;
+}
+.footer-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.footer-subtitle {
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.footer-desc {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.footer-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.footer-btn {
+  background: #111a2b;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+.footer-hours {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+}
+.footer-right {
+  width: 48%;
+}
+.footer-questions-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+.footer-questions-list {
+  list-style: none;
+  padding: 0;
+}
+.footer-questions-list li {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px dotted #fff;
+  padding-bottom: 0.5rem;
+}
+</style>
